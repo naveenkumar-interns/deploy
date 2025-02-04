@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+from langchain_google_genai import ChatGoogleGenerativeAI
+import os
 
 app = Flask(__name__)
 
