@@ -190,12 +190,12 @@ memory = ConversationBufferWindowMemory(return_messages=True, k=2)
 #         raise
 
 
-# @app.route('/open-vectorstore', methods=['POST'])
-# def createvectorstore():
-#     from create_store import open_vectorstore
-#     open_vectorstore()
-#     print("vectorstore created successfully")
-#     return jsonify({"message": "Vectorstore created successfully"})
+@app.route('/open-vectorstore', methods=['POST'])
+def createvectorstore():
+    from create_store import open_vectorstore
+    open_vectorstore()
+    print("vectorstore created successfully")
+    return jsonify({"message": "Vectorstore created successfully"})
 
 
 # @app.route('/load-vectorstore', methods=['POST'])
