@@ -20,5 +20,5 @@ def hello():
 
 @app.route('/llm', methods=['GET'])
 def llm():
-    text = llm.invoke("hi")
+    text = llm.invoke("hi").content
     return jsonify({'message': 'Hello, World!',"response":text})
