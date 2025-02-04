@@ -15,18 +15,18 @@ load_dotenv()
 # vectorstore = load_vectorstore(vectorstore_path="shopify_langchain_testing_vectorstore",index_name="products")
 # print("vectorstore loaded successfully")
 
-# llm = ChatGoogleGenerativeAI(
-#     model="gemini-1.5-pro",
-#     temperature=0.7,
-#     max_tokens=50,
-#     timeout=None,
-#     max_retries=2,
-#     google_api_key=os.getenv("GOOGLE_API_KEY"),
-# )
+llm = ChatGoogleGenerativeAI(
+    model="gemini-1.5-pro",
+    temperature=0.7,
+    max_tokens=50,
+    timeout=None,
+    max_retries=2,
+    google_api_key=os.getenv("GOOGLE_API_KEY"),
+)
 
-# keywords = ""
+keywords = ""
 
-# memory = ConversationBufferWindowMemory(return_messages=True, k=2)
+memory = ConversationBufferWindowMemory(return_messages=True, k=2)
 
 
 # def get_keywords(input_text):
