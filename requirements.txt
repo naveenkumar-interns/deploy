@@ -10,4 +10,3 @@ langchain-google-genai
 faiss-cpu
 langchain-community
 langchain-huggingface
-Flask-Cors
