@@ -150,9 +150,9 @@ def save_vectorstore(vectorstore,save_path,index_name):
     print("vectorstore saved to : ", save_path)
     return None
 
-# def load_vectorstore(vectorstore_path,index_name):
-#     vectorstore = FAISS.load_local(folder_path = vectorstore_path,index_name = index_name, embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2") , allow_dangerous_deserialization=True)
-#     return vectorstore
+def load_vectorstore(vectorstore_path,index_name):
+    vectorstore = FAISS.load_local(folder_path = vectorstore_path,index_name = index_name, embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2") , allow_dangerous_deserialization=True)
+    return vectorstore
 
 
 
@@ -176,8 +176,8 @@ def open_vectorstore():
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     vectorstore = create_vectorstore(documents,embeddings)
     save_vectorstore(vectorstore,save_path = "shopify_langchain_testing_vectorstore",index_name = "products")
-    # vectorstore = load_vectorstore(vectorstore_path="shopify_langchain_testing_vectorstore",index_name="products")
-    # print("vectorstore loaded successfully")
+    vectorstore = load_vectorstore(vectorstore_path="shopify_langchain_testing_vectorstore",index_name="products")
+    print("vectorstore loaded successfully")
 
 if __name__ == "__main__":
     open_vectorstore()
