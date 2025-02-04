@@ -13,15 +13,25 @@ llm = ChatGoogleGenerativeAI(
     max_retries=2,
     google_api_key=os.getenv("GOOGLE_API_KEY"),
     )
+
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({'message': 'working'})
+    
 @app.route('/hello', methods=['GET'])
 def hello():
     return jsonify({'message': 'Hello, World!'})
 
-
-@app.route('/llm', methods=['GET'])
-def llm():
+@app.route('/llmin', methods=['GET'])
+def llmin():
     text = llm.invoke("hi").content
-    return jsonify({'message': 'Hello, World!',"response":text})
+    return jsonify({"response":text})
+
+@app.route('/llmout', methods=['POST'])
+def response():
+    text = request.json['message']
+    text = llm.invoke(text).content
+    return jsonify({"response":text})
 
 if __name__ == '__main__':
     app.run()
