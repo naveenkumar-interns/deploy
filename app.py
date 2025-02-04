@@ -1,16 +1,16 @@
 from flask import Flask, request, jsonify
-# from langchain.chains.llm import LLMChain
-# from langchain_core.prompts import ChatPromptTemplate
-# from langchain_google_genai import ChatGoogleGenerativeAI
-# from langchain.chains.conversation.memory import ConversationBufferWindowMemory
-# import os
-# from dotenv import load_dotenv
-# from datetime import datetime
+from langchain.chains.llm import LLMChain
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.chains.conversation.memory import ConversationBufferWindowMemory
+import os
+from dotenv import load_dotenv
+from datetime import datetime
 # from utils import load_vectorstore
 
 app = Flask(__name__)
 # Load environment variables
-# load_dotenv()
+load_dotenv()
 
 # vectorstore = load_vectorstore(vectorstore_path="shopify_langchain_testing_vectorstore",index_name="products")
 # print("vectorstore loaded successfully")
