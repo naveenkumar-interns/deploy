@@ -1,3 +1,14 @@
 Flask
 Gunicorn
-
+langchain
+pandas
+python-dotenv
+tiktoken
+jq
+beautifulsoup4
+langchain-google-genai
+faiss-cpu
+langchain-community
+langchain-huggingface
+Flask
+Flask-Cors
